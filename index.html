@@ -4,141 +4,268 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <a href="#" class="logo">
-                    <img class="logo__img" src="images/logo.png" alt="">
-                </a>
-                <div class="header__container">
-                    <div class="header__top">
-                        <div class="header__top-title">
-                            <a href="#"> Доставка и оплата </a>
-                        </div>
-                        <div class="header__top-about">
-                            <a class="phone" href="tel:+74956914837">+7 (495) 691-48-37</a>
-                            <button class="header__button">
-                                Обратный звонок
+        <div class="header__wrapper">
+            <a href="#" class="logo">
+                <img class="logo__img" src="images/logo.png" alt="">
+            </a>
+            <div class="header__container">
+                <div class="header__top">
+                    <a href="#" class="logo-mobile">
+                        <img class="logo__img-mobile" src="images/logo.png" alt="">
+                    </a>
+                    <div class="header__top-title">
+                        <a href="#"> Доставка и оплата </a>
+                    </div>
+                    <div class="header__top-about">
+                        <a class="phone" href="tel:+74956914837">+7 (495) 691-48-37</a>
+                        <button class="header__button">
+                            Обратный звонок
+                        </button>
+                        <div class="header__input-form">
+                            <input class="header__input" type="text" placeholder="Введите название">
+                            <button class="header__input-button" value="">
                             </button>
-                            <form class="header__input-form">
-                                <input class="header__input" type="text" placeholder="Введите название">
-                                <button class="header__input-button" value="">
-                                    <img src="images/search.svg" alt="">
-                                </button>
-                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__bottom">
+
+                    <div class="menu-burger">
+                        <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1H31" stroke="#184F77" stroke-width="2" stroke-linecap="round" />
+                            <path d="M1 9H31" stroke="#184F77" stroke-width="2" stroke-linecap="round" />
+                            <path d="M1 17H31" stroke="#184F77" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <div class="overlay">
+                        <div class="mobile-popup">
+
+                            <div class="mobile-popup-header">
+                                <img class="mobile-popup-logo" src="images/mobile-popup-logo.svg" alt="">
+                                <img class="mobile-close-icon" src="images/close-icon.svg" alt="">
+                            </div>
+                            <nav class="mobile-menu">
+                                <ul class="mobile__menu-list">
+                                    <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#">
+                                            Главная</a></li>
+                                    <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#">
+                                            Каталог</a></li>
+                                    <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#"> Бренды</a>
+                                    </li>
+                                    <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#"> О
+                                            компании</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-delivery">
+                                <div class="mobile-delivery-title">
+                                    Доставка и оплата
+                                </div>
+                                <div class="mobile-delivery-form">
+                                    <input class="mobile-header__input" type="text" placeholder="Введите название">
+                                    <button class="mobile-header__input-button" value="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="mobile-contacts">
+                                <div class="mobile-contacts-phone"> +7 (495) 690-24-79 </div>
+                                <div class="mobile-contacts-phone"> +7 (495) 691-48-37</div>
+                                <div class="mobile-contacts-address"> 121069, г. Москва, <br> Мерзляковский пер., д.10
+                                </div>
+                                <div class="mobile-contacts-time"> Пн-Вс 10:00 - 20:00</div>
+                                <div class="mobile-contats-email"> shop@rhana-opt.ru</div>
+                            </div>
+                            <div class="mobile-footer"> © 2020 ООО "Эстетик Профи"</div>
+
                         </div>
                     </div>
 
-                    <div class="header__bottom">
-                        <nav class="menu">
-                            <ul class="header__menu-list">
-                                <li class="header__menu-item"><a href="#"> Главная</a></li>
-                                <li class="header__menu-item"><a href="#"> Каталог</a></li>
-                                <li class="header__menu-item"><a href="#"> Бренды</a></li>
-                                <li class="header__menu-item"><a href="#"> О компании</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__autorization">
-                            <a class="header__profile" href="#">Личный кабинет</a>
-                            <div class="header__basket">
-                                <a href="#"><img class="header__basket-img" src="images/basket.png" alt=""></a>
-                                <p class="header__basket-price"> 2 </p>
+
+                    <nav class="menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="#"> Главная</a></li>
+                            <li class="header__menu-item"><a href="#"> Каталог</a></li>
+                            <li class="header__menu-item"><a href="#"> Бренды</a></li>
+                            <li class="header__menu-item"><a href="#"> О компании</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__autorization">
+                        <a class="header__profile" href="#">Личный кабинет</a>
+                        <div class="header__basket">
+                            <a class="header__basket-link" href="#">
+                                <img class="header__basket-img" src="images/basket.png" alt="">
+                                <div class="header__basket-price"> 2 </div>
                                 <div class="header__basket-sum"> 10 459 P </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="mobile-header">
+            <div class="menu-burger">
+                <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H31" stroke="#184F77" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 9H31" stroke="#184F77" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 17H31" stroke="#184F77" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="overlay">
+                <div class="mobile-popup">
+
+                    <div class="mobile-popup-header">
+                        <img class="mobile-popup-logo" src="images/mobile-popup-logo.svg" alt="">
+                        <img class="mobile-close-icon" src="images/close-icon.svg" alt="">
+                    </div>
+                    <nav class="mobile-menu">
+                        <ul class="mobile__menu-list">
+                            <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#">
+                                    Главная</a></li>
+                            <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#">
+                                    Каталог</a></li>
+                            <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#"> Бренды</a>
+                            </li>
+                            <li class="mobile__menu-item"><a class="mobile__menu-item-link" href="#"> О
+                                    компании</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-delivery">
+                        <div class="mobile-delivery-title">
+                            Доставка и оплата
+                        </div>
+                        <div class="mobile-delivery-form">
+                            <input class="mobile-header__input" type="text" placeholder="Введите название">
+                            <button class="mobile-header__input-button" value="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mobile-contacts">
+                        <div class="mobile-contacts-phone"> +7 (495) 690-24-79 </div>
+                        <div class="mobile-contacts-phone"> +7 (495) 691-48-37</div>
+                        <div class="mobile-contacts-address"> 121069, г. Москва, <br> Мерзляковский пер., д.10
+                        </div>
+                        <div class="mobile-contacts-time"> Пн-Вс 10:00 - 20:00</div>
+                        <div class="mobile-contats-email"> shop@rhana-opt.ru</div>
+                    </div>
+                    <div class="mobile-footer"> © 2020 ООО "Эстетик Профи"</div>
+
+                </div>
+            </div>
+            <a href="#" class="logo-mobile">
+                <img class="logo__img-mobile" src="images/logo.png" alt="">
+            </a>
+            <div class="header__basket">
+                <a class="header__basket-link" href="#">
+                    <img class="header__basket-img" src="images/basket.png" alt="">
+                    <div class="header__basket-price"> 2 </div>
+
+                </a>
+            </div>
+
+        </div>
     </header>
+
 
     <section class="banner">
         <div class="banner__wrapper">
             <div class="banner__item">
-                <div class="banner__product-name">
-                    Bright Rich Hand Veil
-                </div>
-                <div class="banner__title">
-                    Скидка 20% на антивозрастной крем для рук с фитоэстрогенами
-                </div>
-                <div class="banner__text">
-                    Придает коже рук гладкость шелка, повышает упругость, создает лифтинг-эффект. Инновационный макрогиалуроновый комплекс восстанавливает барьерные функции кожи, предотвращает потерю влаги и шелушение.
-                </div>
-                <div class="banner__price">
-                    <div class="banner__price-discount">
-                        <span class="banner__discount-percent"> -20 % </span>
-                        <span class="banner__discount-price"> 3 037,00 ₽ </span>
-                        <div class="banner__price-new">
-                            3 037,00 ₽
-                        </div>
+                <div class="banner__item-inner">
+                    <div class="banner__product-name">
+                        Bright Rich Hand Veil
                     </div>
-                    <button class="banner__button-about">
-                        Подробнее о продукте
-                    </button>
+                    <div class="banner__title">
+                        Скидка 20% на антивозрастной крем для рук с фитоэстрогенами
+                    </div>
+                    <div class="banner__text">
+                        Придает коже рук гладкость шелка, повышает упругость, создает лифтинг-эффект. Инновационный макрогиалуроновый комплекс восстанавливает барьерные функции кожи, предотвращает потерю влаги и шелушение.
+                    </div>
+                    <div class="banner__price">
+                        <div class="banner__price-discount">
+                            <span class="banner__discount-percent"> -20 % </span>
+                            <span class="banner__discount-price"> 3 037,00 ₽ </span>
+                            <div class="banner__price-new">
+                                3 037,00 ₽
+                            </div>
+                        </div>
+                        <button class="banner__button-about">
+                            Подробнее о продукте
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="banner__item">
-                <div class="banner__product-name">
-                    Bright Rich Hand Veil
-                </div>
-                <div class="banner__title">
-                    Скидка 20% на антивозрастной крем для рук с фитоэстрогенами
-                </div>
-                <div class="banner__text">
-                    Придает коже рук гладкость шелка, повышает упругость, создает лифтинг-эффект. Инновационный макрогиалуроновый комплекс восстанавливает барьерные функции кожи, предотвращает потерю влаги и шелушение.
-                </div>
-                <div class="banner__price">
-                    <div class="banner__price-discount">
-                        <span class="banner__discount-percent"> -20 % </span>
-                        <span class="banner__discount-price"> 3 037,00 ₽ </span>
-                        <div class="banner__price-new">
-                            3 037,00 ₽
-                        </div>
+                <div class="banner__item-inner">
+                    <div class="banner__product-name">
+                        Bright Rich Hand Veil
                     </div>
-                    <button class="banner__button-about">
-                        Подробнее о продукте
-                    </button>
+                    <div class="banner__title">
+                        Скидка 20% на антивозрастной крем для рук с фитоэстрогенами
+                    </div>
+                    <div class="banner__text">
+                        Придает коже рук гладкость шелка, повышает упругость, создает лифтинг-эффект. Инновационный макрогиалуроновый комплекс восстанавливает барьерные функции кожи, предотвращает потерю влаги и шелушение.
+                    </div>
+                    <div class="banner__price">
+                        <div class="banner__price-discount">
+                            <span class="banner__discount-percent"> -20 % </span>
+                            <span class="banner__discount-price"> 3 037,00 ₽ </span>
+                            <div class="banner__price-new">
+                                3 037,00 ₽
+                            </div>
+                        </div>
+                        <button class="banner__button-about">
+                            Подробнее о продукте
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="banner__item">
-                <div class="banner__product-name">
-                    Bright Rich Hand Veil
-                </div>
-                <div class="banner__title">
-                    Скидка 20% на антивозрастной крем для рук с фитоэстрогенами
-                </div>
-                <div class="banner__text">
-                    Придает коже рук гладкость шелка, повышает упругость, создает лифтинг-эффект. Инновационный макрогиалуроновый комплекс восстанавливает барьерные функции кожи, предотвращает потерю влаги и шелушение.
-                </div>
-                <div class="banner__price">
-                    <div class="banner__price-discount">
-                        <span class="banner__discount-percent"> -20 % </span>
-                        <span class="banner__discount-price"> 3 037,00 ₽ </span>
-                        <div class="banner__price-new">
-                            3 037,00 ₽
-                        </div>
+                <div class="banner__item-inner">
+                    <div class="banner__product-name">
+                        Bright Rich Hand Veil
                     </div>
-                    <button class="banner__button-about">
-                        Подробнее о продукте
-                    </button>
-                    <div class="banner__arrows">
-                        <div class="banner__prev-arrow">
-                            <svg width="12" height="20" viewBox="0 0 12 20" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 2L10 10L2 18" stroke="#2EA6FF" stroke-width="3" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                    <div class="banner__title">
+                        Скидка 20% на антивозрастной крем для рук с фитоэстрогенами
+                    </div>
+                    <div class="banner__text">
+                        Придает коже рук гладкость шелка, повышает упругость, создает лифтинг-эффект. Инновационный макрогиалуроновый комплекс восстанавливает барьерные функции кожи, предотвращает потерю влаги и шелушение.
+                    </div>
+                    <div class="banner__price">
+                        <div class="banner__price-discount">
+                            <span class="banner__discount-percent"> -20 % </span>
+                            <span class="banner__discount-price"> 3 037,00 ₽ </span>
+                            <div class="banner__price-new">
+                                3 037,00 ₽
+                            </div>
+                        </div>
+                        <button class="banner__button-about">
+                            Подробнее о продукте
+                        </button>
+                        <div class="banner__arrows">
+                            <div class="banner__prev-arrow">
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2L10 10L2 18" stroke="#2EA6FF" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,12 +273,15 @@
         </div>
     </section>
 
+
+
     <section class="special">
         <div class="title special-title">
             Специальные предложения
         </div>
         <div class="special__wrapper">
-            <div class="special__item">
+
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/special/special_1.png)">
                 </div>
                 <div class="special__price">
@@ -170,10 +300,10 @@
                 <div class="special__product">
                     <span class="special__product-name">ЕМ Treatment Oil /</span> Масло регенерирующее с фитоэстрогенами
                 </div>
+            </a>
 
-            </div>
 
-            <div class="special__item">
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/special/special_2.png)">
                 </div>
                 <div class="special__price">
@@ -190,13 +320,13 @@
                 <div class="special__product">
                     <span class="special__product-name">Class Platinum Arcanum Cream /</span> Крем «Arcanum» плацентарный антивозрастной «Платиновая линия»
                 </div>
+            </a>
 
-            </div>
 
-            <div class="special__item">
+
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/special/special_3.png)">
                 </div>
-
                 <div class="special__price">
                     <div class="special__discount">
                         <span class="special__new-price">
@@ -213,13 +343,13 @@
                 <div class="special__product">
                     <span class="special__product-name">Sleeping Moist Gel Mask /</span> Cыворотка-концентрат плацентарная двухфазная для регенерации и выравнивания тона
                 </div>
+            </a>
 
-            </div>
 
-            <div class="special__item">
+
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/special/special_4.png)">
                 </div>
-
                 <div class="special__price">
                     <div class="special__discount">
                         <span class="special__new-price">
@@ -236,13 +366,13 @@
                 <div class="special__product">
                     <span class="special__product-name">Neckline Clear Gel Ex. /</span> Лифтинг-гель антивозрастной для шеи и декольте
                 </div>
+            </a>
 
-            </div>
 
-            <div class="special__item">
+
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/special/special_4.png)">
                 </div>
-
                 <div class="special__price">
                     <div class="special__discount">
                         <span class="special__new-price">
@@ -259,10 +389,10 @@
                 <div class="special__product">
                     <span class="special__product-name">Neckline Clear Gel Ex. /</span> Лифтинг-гель антивозрастной для шеи и декольте
                 </div>
+            </a>
 
-            </div>
 
-            <div class="special__item">
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/special/special_4.png)">
                 </div>
 
@@ -279,18 +409,17 @@
                 <div class="special__product">
                     <span class="special__product-name">Neckline Clear Gel Ex. /</span> Лифтинг-гель антивозрастной для шеи и декольте
                 </div>
-
-            </div>
-
+            </a>
         </div>
     </section>
+
 
     <section class="bestsellers">
         <div class="title">
             Бестселлеры
         </div>
         <div class="bestsellers__wrapper">
-            <div class="bestsellers__item">
+            <a href="#" class="special__item-link">
                 <div class="bestsellers__item-img" style="background-image: url(images/bestsellers/bestsellers_1.png)">
                 </div>
                 <div class="bestsellers__price">
@@ -307,9 +436,9 @@
                     <span class="bestsellers__product-name">ЕМ Treatment Oil /</span> Масло регенерирующее с фитоэстрогенами
                 </div>
 
-            </div>
+            </a>
 
-            <div class="bestsellers__item">
+            <a href="#" class="special__item-link">
                 <div class="bestsellers__item-img" style="background-image: url(images/bestsellers/bestsellers_2.png)">
                 </div>
                 <div class="bestsellers__price">
@@ -327,9 +456,9 @@
                     <span class="bestsellers__product-name">Class Platinum Arcanum Cream /</span> Крем «Arcanum» плацентарный антивозрастной «Платиновая линия»
                 </div>
 
-            </div>
+            </a>
 
-            <div class="bestsellers__item">
+            <a href="#" class="special__item-link">
                 <div class="bestsellers__item-img" style="background-image: url(images/bestsellers/bestsellers_3.png)">
                 </div>
 
@@ -348,9 +477,9 @@
                     <span class="bestsellers__product-name">Sleeping Moist Gel Mask /</span> Cыворотка-концентрат плацентарная двухфазная для регенерации и выравнивания тона
                 </div>
 
-            </div>
+            </a>
 
-            <div class="bestsellers__item">
+            <a href="#" class="special__item-link">
                 <div class="bestsellers__item-img" style="background-image: url(images/bestsellers/bestsellers_4.png)">
                 </div>
 
@@ -370,8 +499,8 @@
                 <div class="bestsellers__product">
                     <span class="bestsellers__product-name">Neckline Clear Gel Ex. /</span> Лифтинг-гель антивозрастной для шеи и декольте
                 </div>
-            </div>
-            <div class="special__item">
+            </a>
+            <a href="#" class="special__item-link">
                 <div class="special__item-img" style="background-image: url(images/bestsellers/bestsellers_4.png)">
                 </div>
 
@@ -392,9 +521,10 @@
                     <span class="special__product-name">Neckline Clear Gel Ex. /</span> Лифтинг-гель антивозрастной для шеи и декольте
                 </div>
 
-            </div>
+            </a>
         </div>
     </section>
+
 
     <section class="plarecanta">
         <div class="title">
@@ -426,7 +556,8 @@
                     <button class="content-button plarecanta__about-button"> Подробнее о бренде </button>
                 </div>
             </div>
-            <div class="plarecanta__product-item">
+
+            <a href="#" class="special__item-link">
                 <div class="plarecanta__product-img" style="background-image: url(images/plarecanta_1.png)">
                 </div>
                 <div class="plarecanta__price">
@@ -446,9 +577,9 @@
                     <span class="plarecanta__product-name">PlaReceta Ampoule / </span> Сыворотка плацентарная для омоложения и восстановления кожи
                 </div>
 
-            </div>
+            </a>
 
-            <div class="plarecanta__product-item">
+            <a href="#" class="special__item-link">
                 <div class="plarecanta__product-img" style="background-image: url(images/plarecanta_2.png)">
                 </div>
                 <div class="plarecanta__price">
@@ -467,9 +598,60 @@
                 <div class="plarecanta__product">
                     <span class="plarecanta__product-name"> PlaReceta Bb Cream Set / </span> Премиальный набор «Идеальная кожа лица. Здоровый тон»
                 </div>
-            </div>
+            </a>
+
         </div>
+
+        <div class="plarecanta__mobile-slider">
+            <a href="#" class="special__item-link">
+                <div class="plarecanta__product-img" style="background-image: url(images/plarecanta_1.png)">
+                </div>
+                <div class="plarecanta__price">
+                    <div class="plarecanta__discount">
+                        <span class="plarecanta__new-price">
+                            17 519,00 ₽
+                        </span>
+                        <span class="plarecanta__old-price">
+                            18 519,00 ₽
+                        </span>
+                    </div>
+                    <div class="plarecanta__percent">
+                        10%
+                    </div>
+                </div>
+                <div class="plarecanta__product">
+                    <span class="plarecanta__product-name">PlaReceta Ampoule / </span> Сыворотка плацентарная для омоложения и восстановления кожи
+                </div>
+
+            </a>
+
+            <a href="#" class="special__item-link">
+                <div class="plarecanta__product-img" style="background-image: url(images/plarecanta_2.png)">
+                </div>
+                <div class="plarecanta__price">
+                    <div class="plarecanta__discount">
+                        <span class="plarecanta__new-price">
+                            17 519,00 ₽
+                        </span>
+                        <span class="plarecanta__old-price">
+                            18 519,00 ₽
+                        </span>
+                    </div>
+                    <div class="plarecanta__percent">
+                        10%
+                    </div>
+                </div>
+                <div class="plarecanta__product">
+                    <span class="plarecanta__product-name"> PlaReceta Bb Cream Set / </span> Премиальный набор «Идеальная кожа лица. Здоровый тон»
+                </div>
+            </a>
+
+        </div>
+
+        <button class="content-button plarecanta-button-mobile"> Каталог бренда </button>
+
     </section>
+
 
     <section class="bblaboratories">
         <div class="title">
@@ -503,7 +685,7 @@
                 </div>
             </div>
 
-            <div class="bblaboratories__product-item">
+            <a href="#" class="special__item-link">
                 <div class="bblaboratories__product-img" style="background-image: url(images/bblaboratories.png)">
                 </div>
                 <div class="bblaboratories__price">
@@ -522,11 +704,11 @@
                 <div class="bblaboratories__product">
                     <span class="bblaboratories__product-name">PFD / </span> Cыворотка-концентрат плацентарная двухфазная для регенерации и выравнивания тона
                 </div>
-            </div>
+            </a>
 
-            <div class="bblaboratories__product-item">
+            <a href="#" class="special__item-link">
                 <div class="bblaboratories__product-img" style="background-image: url(images/bblaboratories.png)">
-                    <!-- <img src="images/plarecanta_2.png" alt="">  -->
+
                 </div>
                 <div class="bblaboratories__price">
                     <div class="bblaboratories__discount">
@@ -544,16 +726,64 @@
                 <div class="bblaboratories__product">
                     <span class="bblaboratories__product-name">PFD / </span> Cыворотка-концентрат плацентарная двухфазная для регенерации и выравнивания тона
                 </div>
-            </div>
+            </a>
         </div>
+
         </div>
+        <div class="bblaboratories__mobile-slider">
+            <a href="#" class="special__item-link">
+                <div class="bblaboratories__product-img" style="background-image: url(images/bblaboratories.png)">
+                </div>
+                <div class="bblaboratories__price">
+                    <div class="bblaboratories__discount">
+                        <span class="bblaboratories__new-price">
+                            17 519,00 ₽
+                        </span>
+                        <span class="bblaboratories__old-price">
+                            18 519,00 ₽
+                        </span>
+                    </div>
+                    <div class="bblaboratories__percent">
+                        10%
+                    </div>
+                </div>
+                <div class="bblaboratories__product">
+                    <span class="bblaboratories__product-name">PFD / </span> Cыворотка-концентрат плацентарная двухфазная для регенерации и выравнивания тона
+                </div>
+            </a>
+
+            <a href="#" class="special__item-link">
+                <div class="bblaboratories__product-img" style="background-image: url(images/bblaboratories.png)">
+
+                </div>
+                <div class="bblaboratories__price">
+                    <div class="bblaboratories__discount">
+                        <span class="bblaboratories__new-price">
+                            17 519,00 ₽
+                        </span>
+                        <span class="bblaboratories__old-price">
+                            18 519,00 ₽
+                        </span>
+                    </div>
+                    <div class="bblaboratories__percent">
+                        10%
+                    </div>
+                </div>
+                <div class="bblaboratories__product">
+                    <span class="bblaboratories__product-name">PFD / </span> Cыворотка-концентрат плацентарная двухфазная для регенерации и выравнивания тона
+                </div>
+            </a>
+        </div>
+
+        <button class="content-button bblaboratories-button-mobile"> Каталог бренда </button>
     </section>
+
+
 
     <section class="brands">
         <div class="title">
             Наши бренды
         </div>
-
         <div class="brands__wrapper">
             <div class="brands__item">
                 <div class="brands__item-img">
@@ -611,6 +841,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="rewiews">
         <div class="rewiews-header">
@@ -778,7 +1009,9 @@
                     </li>
                 </ul>
 
+
                 <!-- Для того, чтобы сделать звездочку голубого цвета, нужно приписать тегу svg класс star-active -->
+
 
                 <div class="rewiews__text">
                     Когда я в очередной раз купила абсолютно бесполезный пластилиновый французский крем в потрясающе красивой баночке, у меня началось постепенное просветление насчет японцев. Японские тоники — это гораздо больше, чем просто тоники, которые мы обычно покупаем
@@ -795,6 +1028,7 @@
         </div>
     </section>
 
+
     <section class="follow">
         <div class="follow__inner">
             <div class="follow__title">
@@ -808,7 +1042,8 @@
 
                 </input>
                 <button class="follow__button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="follow__button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.2012 12.0125L0.75125 10.6575L0.75 2.09252C0.750164 1.8638 0.80876 1.63891 0.92023 1.43919C1.0317 1.23947 1.19235 1.07155 1.38693 0.951338C1.58152 0.831132 1.80359 0.762632 2.03208 0.752337C2.26056 0.742043 2.48789 0.790295 2.6925 0.892516L22.5075 10.8C22.7301 10.9117 22.9172 11.083 23.048 11.295C23.1788 11.5069 23.2481 11.751 23.2481 12C23.2481 12.249 23.1788 12.4932 23.048 12.7051C22.9172 12.917 22.7301 13.0884 22.5075 13.2L2.695 23.1075C2.49039 23.2097 2.26306 23.258 2.03457 23.2477C1.80609 23.2374 1.58402 23.1689 1.38943 23.0487C1.19485 22.9285 1.0342 22.7606 0.922729 22.5608C0.81126 22.3611 0.752664 22.1362 0.7525 21.9075V13.3425L14.2025 12.0125H14.2012Z"
                             fill="url(#paint0_linear)" />
@@ -824,6 +1059,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="contacts">
         <div class="contacts__container">
@@ -872,14 +1108,28 @@
             </div>
 
         </div>
+
+        <div class="contacts__map-mobile">
+            <div class="contacts__map">
+                <div class="contacts__information">
+                    <div class="contacts__information-name">
+                        Аптека Rhana
+                    </div>
+                    <div class="contacts__information-text">
+                        Ежедневно с 10:00 - 20:00, без перерыва на обед
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
 
     <section class="footer">
         <div class="footer__wrapper">
             <div class="footer__logo-block">
                 <div class="footer__logo">
                     <a href="#">
-                        <img src="images/footer_logo.png" alt="">
+                        <img class="footer__logo-img" src="images/footer_logo.png" alt="">
                     </a>
                 </div>
                 <div class="footer__logo-text">
@@ -926,10 +1176,12 @@
                     </div>
 
                 </div>
-                <a class="footer__about-personal-link" href="#"> Согласие на обработку персональных данных
-                    и политика конфиденциальности</a>
-                <div class="footer__copyright">
-                    © 2020 ООО "Эстетик Профи"
+                <div class="footer__about-personal">
+                    <a class="footer__about-personal-link" href="#"> Согласие на обработку персональных данных
+                        и политика конфиденциальности</a>
+                    <div class="footer__copyright">
+                        © 2020 ООО "Эстетик Профи"
+                    </div>
                 </div>
 
             </div>
@@ -954,9 +1206,15 @@
                 </div>
 
             </div>
+            <div class="footer__about-personal-mobile">
+                <a class="footer__about-personal-link-mobile" href="#"> Согласие на обработку персональных данных
+                    и политика конфиденциальности</a>
+                <div class="footer__copyright-mobile">
+                    © 2020 ООО "Эстетик Профи"
+                </div>
+            </div>
         </div>
         </div>
-
     </section>
 
 

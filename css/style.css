@@ -13,11 +13,6 @@ body {
     ;
 }
 
-.container {
-    max-width: 1194px;
-    margin: 0 auto;
-}
-
 a {
     text-decoration: none;
     color: #184F77;
@@ -27,7 +22,10 @@ a {
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 21px;
+    max-width: 1194px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px 0 26px 0;
 }
 
 .header {
@@ -38,23 +36,165 @@ a {
 .header__top {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 17px 0;
+    padding-bottom: 15px;
     border-bottom: 1px solid #F1F5F9;
     align-items: center;
 }
 
-.logo {
-    width: 98px;
-    height: 98px;
-    padding: 32px 78px 31px 0;
+.logo-mobile,
+.menu-burger {
+    display: none;
+    visibility: hidden;
+}
+
+.menu-burger {
+    cursor: pointer;
+}
+
+.mobile-popup {
+    background-color: #3CACFE;
+    z-index: 3;
+    color: #fff;
+    padding: 40px 40px 40px 60px;
+    text-align: center;
+}
+
+.mobile-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 50px;
+}
+
+.mobile-popup-logo {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.mobile-close-icon {
+    max-width: 50px;
+    max-height: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+
+.mobile__menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.mobile__menu-item {
+    margin-bottom: 20px;
+}
+
+.mobile__menu-item-link {
+    color: #fff;
+}
+
+.mobile__menu-item-link:hover {
+    color: #184F77;
+    transition: all 0.5s;
+}
+
+.mobile-delivery-title {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 30px;
+}
+
+.mobile-delivery-form {
+    width: 378px;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #F1F5F9;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 95px;
+}
+
+.mobile-header__input {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    width: 318px;
+    height: 40px;
+    outline: none;
+    padding: 0 12px 0 20px;
+    color: #184F77;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    position: relative;
+    vertical-align: middle;
+}
+
+.mobile-header__input-button {
+    width: 55px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mobile-contacts {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.mobile-contacts-phone {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.mobile-contacts-address {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.mobile-contacts-time {
+    margin-bottom: 25px;
+}
+
+.mobile-footer {
+    margin-bottom: 60px;
+}
+
+.mobile-header {
+    display: none;
+    visibility: hidden;
+}
+
+.logo__img {
+    max-width: 98px;
+    max-height: 98px;
 }
 
 .header__top-title {
     font-size: 15px;
     line-height: 18px;
     font-weight: 400;
-    width: 186px;
-    margin-right: 84px;
+    margin-right: 140px;
 }
 
 .header__top-about {
@@ -98,6 +238,8 @@ a {
     height: 40px;
     border-radius: 20px;
     background-color: #F1F5F9;
+    display: flex;
+    align-items: center;
 }
 
 .header__input {
@@ -117,24 +259,27 @@ a {
 }
 
 .header__input-button {
-    width: 25px;
+    width: 55px;
     height: 25px;
     border: none;
-    vertical-align: middle;
     background: transparent;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .header__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 9px;
+    padding-top: 7px;
 }
 
 .menu {
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
+    width: 530px;
 }
 
 .menu a:hover {
@@ -155,6 +300,7 @@ a {
 .header__autorization {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__basket {
@@ -163,13 +309,20 @@ a {
     position: relative;
 }
 
+.header__basket-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
 .header__profile {
     color: #184F77;
     font-size: 15px;
     line-height: 18px;
     font-weight: 400;
     position: relative;
-    margin-right: 23px;
+    margin-right: 35px;
 }
 
 .header__profile::before {
@@ -192,17 +345,20 @@ a {
     position: absolute;
     background-color: #184F77;
     font-size: 12px;
-    line-height: 14px;
     font-weight: 400;
     color: #fff;
-    text-align: center;
-    padding: 2px 5px;
     border-radius: 100%;
     border: 2px solid #fff;
-    top: 4px;
+    top: 17px;
     left: 27px;
     width: 23px;
     height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 23px;
+    max-height: 23px;
+    padding: 5px;
 }
 
 .header__basket-sum {
@@ -215,12 +371,11 @@ a {
 
 .banner {
     background-color: #3CACFE;
-    height: 710px;
     max-width: 100%;
     margin: 0 auto;
     background-image: url(../images/banner.png);
     background-repeat: no-repeat;
-    background-position: calc(70% + 100px) calc(50% + 117px);
+    background-position: calc(50% + 240px) -58px;
 }
 
 .banner__wrapper {
@@ -231,8 +386,12 @@ a {
 }
 
 .banner__item {
-    margin-bottom: 73px;
     position: relative;
+}
+
+.banner__item-inner {
+    width: 441px;
+    padding-top: 80px;
 }
 
 .banner__product-name {
@@ -240,22 +399,18 @@ a {
     line-height: 28px;
     font-weight: 400;
     opacity: 50%;
-    padding-top: 80px;
     margin-bottom: 9px;
-    width: 727px;
 }
 
 .banner__title {
     font-size: 30px;
     line-height: 42px;
-    width: 438px;
     font-weight: 700;
     margin-bottom: 22px;
 }
 
 .banner__text {
-    width: 441px;
-    height: 126px;
+    max-height: 133px;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
@@ -265,7 +420,6 @@ a {
 .banner__price {
     display: flex;
     justify-content: space-between;
-    max-width: 441px;
 }
 
 .banner__discount-percent {
@@ -357,8 +511,6 @@ a {
 .bestsellers {
     max-width: 1194px;
     margin: 0 auto;
-    padding-bottom: 80px;
-    padding-top: 30px;
 }
 
 .title {
@@ -366,30 +518,49 @@ a {
     font-size: 35px;
     line-height: 42px;
     font-weight: 700;
-    margin-top: 30px;
     margin-bottom: 50px;
 }
 
-.special-title {
-    margin-top: 50px;
+.special__item {
+    background-color: #fff;
 }
 
-.special__item,
-.bestsellers__item {
+.special__item-link {
+    display: block;
     background-color: #fff;
-    max-width: 276px;
+    width: 276px;
     text-align: center;
-    padding: 20px 20px 30px 20px;
+    padding: 20px 20px 15px 20px;
+}
+
+.plarecanta__mobile-slider,
+.bblaboratories__mobile-slider {
+    display: none;
+    visibility: hidden;
+}
+
+.plarecanta .special__item-link,
+.bblaboratories .special__item-link {
+    height: 408px;
+}
+
+.plarecanta-button-mobile,
+.bblaboratories-button-mobile {
+    display: none;
+    visibility: hidden;
 }
 
 .special__item-img,
 .bestsellers__item-img,
 .plarecanta__product-img,
 .bblaboratories__product-img {
+    max-width: 236px;
+    max-height: 236px;
     width: 236px;
     height: 236px;
     background-position: center center;
     background-size: cover;
+    margin: 0 auto;
 }
 
 .special__price,
@@ -398,6 +569,8 @@ a {
 .bblaboratories__price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 44px;
 }
 
 .special__new-price,
@@ -446,7 +619,8 @@ a {
     color: #184F77;
     text-align: left;
     max-height: 64px;
-    padding-bottom: calc(20% + 30px)
+    padding-bottom: 85px;
+    overflow: hidden;
 }
 
 .special__product-name,
@@ -456,18 +630,36 @@ a {
     font-weight: 700;
 }
 
-.slick {
+.special__wrapper .slick {
     max-width: 1194px;
     margin: 0 auto;
 }
 
-.slick-slide {
+.special__wrapper .slick-slide,
+.bestsellers__wrapper .slick-slide,
+.brands__wrapper .slick-slide,
+.plarecanta__mobile-slider .slick-slide,
+.bblaboratories__mobile-slider .slick-slide {
     margin: 0 15px;
 }
 
-.slick-list {
+.special__wrapper .slick-list,
+.bestsellers__wrapper .slick-list,
+.brands__wrapper .slick-list,
+.plarecanta__mobile-slider .slick-list,
+.bblaboratories__mobile-slider .slick-list {
     margin-left: -15px;
     margin-right: -15px;
+}
+
+.banner__wrapper .slick-slide {
+    margin-left: 60px;
+    margin-right: 20px;
+}
+
+.banner__wrapper .slick-list {
+    margin-left: -60px;
+    margin-right: -20px;
 }
 
 .special .slick-arrow,
@@ -506,7 +698,16 @@ a {
 .rewiews {
     max-width: 1194px;
     margin: 0 auto;
-    padding-bottom: 80px;
+}
+
+.banner,
+.special,
+.bestsellers,
+.plarecanta,
+.bblaboratories,
+.brands,
+.rewiews {
+    margin-bottom: 80px;
 }
 
 .plarecanta__content,
@@ -613,13 +814,13 @@ a {
 }
 
 .brands__wrapper {
-    height: 140px;
     background-color: #fff;
-    padding: 44px 71px;
+    padding: 44px 50px;
 }
 
 .brands__item-img {
     max-width: 190px;
+    height: 53px;
     max-height: 53px;
     display: flex;
     justify-content: center;
@@ -629,12 +830,11 @@ a {
 .rewiews-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .rewiews__content-button {
     height: 50px;
-    width: 180px;
+    width: 190px;
 }
 
 .rewiews__wrapper {
@@ -723,6 +923,9 @@ a {
     background-color: #fff;
     border-radius: 30px;
     padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .follow__input {
@@ -739,25 +942,38 @@ a {
 }
 
 .follow__button {
-    vertical-align: middle;
     padding: 0;
-    height: 24px;
-    width: 24px;
-    margin-left: 20px;
+    margin: 15px;
     border: none;
     outline: none;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow__button-icon {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
 }
 
 .contacts {
     background-image: url(../images/contacts__bg.png);
     background-repeat: no-repeat;
-    background-position: calc(50% + -445px) calc(50% + 5px);
+    background-position: calc(50% + -440px) calc(50% + 10px);
+    position: relative;
+}
+
+.contacts__map-mobile {
+    display: none;
+    visibility: hidden;
 }
 
 .contacts__title {
     margin-top: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .contacts__inner {
@@ -776,14 +992,12 @@ a {
 
 .contacts__information {
     width: 302px;
-    padding: 255px 180px 134px 317px;
     background-color: #fff;
-    padding: 33px;
-    position: relative;
-    margin-right: 224px;
+    padding: 28px 33px;
+    position: absolute;
     text-align: left;
-    margin-top: 277px;
-    margin-left: 54px;
+    top: calc(50% + 3px);
+    right: calc(50% + 234px);
 }
 
 .contacts__information::before {
@@ -804,7 +1018,7 @@ a {
     line-height: 23px;
     font-weight: 700;
     color: #51B5FE;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .contacts__information-text {
@@ -818,11 +1032,12 @@ a {
 }
 
 .contacts__description {
-    height: 93px;
+    max-height: 105px;
     font-size: 18px;
     line-height: 27px;
     margin-bottom: 50px;
     text-align: left;
+    overflow: hidden;
 }
 
 .contacts__item-inner {
@@ -947,6 +1162,11 @@ a {
     color: #fff;
 }
 
+.footer__about-personal-mobile {
+    display: none;
+    visibility: hidden;
+}
+
 .footer__wrapper {
     margin: 0 auto;
     max-width: 1194px;
@@ -956,16 +1176,20 @@ a {
 }
 
 .footer__logo-block {
-    /* padding-right: 132px; */
     font-size: 14px;
     line-height: 20px;
     width: 276px;
 }
 
 .footer__logo {
+    margin-bottom: 27px;
+}
+
+.footer__logo-img {
     height: 86px;
     width: 86px;
-    margin-bottom: 27px;
+    max-width: 86px;
+    max-height: 86px;
 }
 
 .footer__logo-text {
@@ -975,6 +1199,8 @@ a {
 
 .footer__logo-datas {
     text-transform: uppercase;
+    font-size: 15px;
+    line-height: 18px;
 }
 
 .footer__about-wrapper {
@@ -1011,23 +1237,1305 @@ a {
 }
 
 .footer__about-personal-link,
-.footer__copyright {
+.footer__copyright,
+.footer__about-personal-link-mobile,
+.footer__copyright-mobile {
     color: #fff;
     font-size: 14px;
     line-height: 17px;
     opacity: 70%;
 }
 
-.footer__about-personal-link {
+.footer__about-personal-link,
+.footer__about-personal-link-mobile {
     text-decoration: underline;
 }
 
-.footer__copyright {
+.footer__copyright,
+.footer__copyright-mobile {
     margin-top: 15px;
 }
 
 .footer__contacts-block {
-    width: 276px;
+    width: 210px;
     font-size: 15px;
     line-height: 18px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}
+
+.mobile-popup {
+    position: absolute;
+    background: #51B5FE;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 40px 60px 60px 60px;
+    z-index: 1000;
+}
+
+@media (max-width: 1235px) {
+    .header__wrapper {
+        padding: 20px 60px 26px 60px;
+    }
+    .header__top-title {
+        margin-right: 20px;
+    }
+    .banner__wrapper,
+    .special,
+    .bestsellers,
+    .plarecanta,
+    .bblaboratories,
+    .brands,
+    .rewiews,
+    .contacts__container,
+    .footer__wrapper {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .banner {
+        background-position: calc(50% + 187px) -58px;
+    }
+    .plarecanta__content,
+    .bblaboratories__content {
+        padding: 30px;
+    }
+    .special__item-link {
+        padding: 15px 15px 30px 15px;
+        margin-left: 20px;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+    }
+    .follow__inner {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+    .special__item-img,
+    .bestsellers__item-img,
+    .plarecanta__product-img,
+    .bblaboratories__product-img {
+        margin: 0 auto;
+    }
+    .special__wrapper .slick-slide,
+    .bestsellers__wrapper .slick-slide,
+    .plarecanta__mobile-slider .slick-slide,
+    .bblaboratories__mobile-slider .slick-slide {
+        margin: 0 30px;
+    }
+    .special__wrapper .slick-list,
+    .bestsellers__wrapper .slick-list,
+    .plarecanta__mobile-slider .slick-list,
+    .bblaboratories__mobile-slider .slick-list {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}
+
+@media (max-width: 1196px) {
+    .header__top-title {
+        margin-right: 20px;
+    }
+    .contacts__information {
+        right: calc(50% + 236px);
+    }
+    .plarecanta__inner,
+    .bblaboratories__inner {
+        display: block;
+    }
+    .plarecanta__content,
+    .bblaboratories__content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .special__item-link {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .plarecanta .special__item-link,
+    .bblaboratories .special__item-link {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1185px) {
+    .header {
+        height: 200px;
+    }
+    .header__top-title,
+    .header__input-form,
+    .menu,
+    .logo {
+        display: none;
+        visibility: hidden;
+    }
+    .header__wrapper {
+        display: block;
+    }
+    .header__top-about {
+        width: 352px;
+    }
+    .header__bottom {
+        padding-top: 16px;
+    }
+    .header__button {
+        margin-right: 0;
+    }
+    .logo-mobile,
+    .menu-burger {
+        display: block;
+        visibility: visible;
+    }
+    .logo__img-mobile {
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .header__top-title {
+        margin-right: 20px;
+    }
+    .banner__wrapper {
+        margin: 0 20px 0 60px;
+    }
+    .plarecanta__inner,
+    .bblaboratories__inner {
+        display: block;
+    }
+    .plarecanta__content,
+    .bblaboratories__content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .special__item-link {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .mobile-popup-header {
+        padding-bottom: 95px;
+    }
+    .mobile-menu {
+        font-size: 39px;
+        line-height: 50px;
+        margin-bottom: 100px;
+    }
+    .mobile-delivery-title {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 50px;
+    }
+    .mobile-contacts {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 110px;
+    }
+    .mobile-footer {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .rewiews__item {
+        padding-bottom: 40px;
+    }
+    .rewiews__sign {
+        padding-top: 25px;
+    }
+    .follow__inner {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .header__top-title {
+        margin-right: 20px;
+    }
+    .contacts {
+        background-position: center calc(50% + 222px);
+        height: 900px;
+    }
+    .title {
+        margin-top: 80px;
+    }
+    .rewiews .title {
+        margin-top: 0;
+    }
+    .contacts__container {
+        margin-right: 60px;
+        margin-left: 60px;
+        flex-direction: column;
+    }
+    .contacts__inner {
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 0;
+        width: 100%;
+        order: -1;
+    }
+    .contacts__item-inner {
+        margin-right: 168px;
+    }
+    .contacts__map {
+        width: 100%;
+    }
+    .contacts__information {
+        left: calc(50% + -93px);
+        top: calc(50% + 214px);
+    }
+}
+
+@media (max-width: 1115px) {
+    .special__item-link {
+        width: 280px;
+    }
+    .special__item-img,
+    .bestsellers__item-img,
+    .plarecanta__product-img,
+    .bblaboratories__product-img {
+        max-width: 210px;
+        max-height: 210px;
+        width: 210px;
+        height: 210px;
+        margin-bottom: 20px;
+    }
+    .special__wrapper .slick-slide,
+    .bestsellers__wrapper .slick-slide,
+    .plarecanta__mobile-slider .slick-slide,
+    .bblaboratories__mobile-slider .slick-slide {
+        margin: 0 15px;
+    }
+    .special__wrapper .slick-list,
+    .bestsellers__wrapper .slick-list,
+    .plarecanta__mobile-slider .slick-list,
+    .bblaboratories__mobile-slider .slick-list {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .banner {
+        background-image: url(../images/banner-mobile.png);
+        background-position: calc(50% + 310px) 250px;
+    }
+    .footer__logo-img {
+        height: 60px;
+        width: 60px;
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .follow {
+        background-image: url(../images/follow-mobile__bg.png);
+        background-position: calc(50% + 308px) -134px;
+    }
+    .title {
+        color: #184F77;
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 40px;
+    }
+    .rewiews__stars {
+        margin-bottom: 25px;
+    }
+    .rewiews__button {
+        margin-bottom: 40px;
+    }
+    .footer__wrapper {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 1010px) {
+    .footer__about-wrapper {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .special__item-img,
+    .bestsellers__item-img,
+    .plarecanta__product-img,
+    .bblaboratories__product-img {
+        max-width: 170px;
+        max-height: 170px;
+        width: 170px;
+        height: 170px;
+        background-position: center center;
+        background-size: cover;
+    }
+    .special__item-link {
+        width: 200px;
+        text-align: center;
+        padding: 15px;
+    }
+    .special__product,
+    .bestsellers__product,
+    .plarecanta__product,
+    .bblaboratories__product {
+        padding-top: 20px;
+        font-size: 11px;
+        line-height: 14px;
+    }
+    .special__old-price,
+    .bestsellers__old-price,
+    .plarecanta__old-price,
+    .bblaboratories__old-price {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .special__percent,
+    .bestsellers__percent,
+    .plarecanta__percent,
+    .bblaboratories__percent {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .special__product,
+    .bestsellers__product,
+    .plarecanta__product,
+    .bblaboratories__product {
+        padding-bottom: 60px;
+    }
+    .special__new-price,
+    .bestsellers__new-price,
+    .plarecanta__new-price,
+    .bblaboratories__new-price {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .special__percent,
+    .bestsellers__percent,
+    .plarecanta__percent,
+    .bblaboratories__percent {
+        font-size: 10px;
+        line-height: 16px;
+        padding: 0px 4px;
+    }
+    .brands__wrapper .slick-slide {
+        margin: 0 20px;
+    }
+    .brands__wrapper .slick-list {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .footer__about-wrapper {
+        margin-right: 0;
+    }
+    .mobile-footer {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 845px) {
+    .brands__wrapper .slick-slide {
+        margin: 0 10px;
+    }
+    .brands__item-img img {
+        max-width: 162px;
+    }
+}
+
+@media (max-width: 845px) {
+    .banner {
+        height: 889px;
+        background-position: calc(50% + 230px) 425px;
+    }
+    .rewiews-header {
+        display: block;
+        margin-bottom: 40px;
+    }
+    .special,
+    .bestsellers {
+        max-width: 951px;
+    }
+    .special__wrapper .slick-slide,
+    .bestsellers__wrapper .slick-slide,
+    .plarecanta__mobile-slider .slick-slide,
+    .bblaboratories__mobile-slider .slick-slide {
+        margin: 10px 10px;
+    }
+    .special__wrapper .slick-list,
+    .bestsellers__wrapper .slick-list,
+    .plarecanta__mobile-slider .slick-list,
+    .bblaboratories__mobile-slider .slick-list {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .special__item-link {
+        padding: 10px;
+    }
+    .special__product,
+    .bestsellers__product,
+    .plarecanta__product,
+    .bblaboratories__product {
+        max-height: 100px;
+    }
+    .brands__wrapper {
+        background-color: #fff;
+        padding: 44px 44px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contacts {
+        height: auto;
+    }
+    .contacts__map-mobile {
+        display: block;
+        visibility: visible;
+        max-width: 100%;
+        height: 569px;
+        margin: 0 auto;
+        background-image: url(../images/contacts-mobile__bg.png);
+        background-repeat: no-repeat;
+        background-position: center 0;
+    }
+    .contacts__information {
+        left: calc(50% + -91px);
+        top: calc(50% + 188px);
+    }
+    .contacts {
+        background-image: none;
+    }
+    .contacts__map {
+        display: block;
+        visibility: visible;
+    }
+    .mobile-popup-header {
+        padding-bottom: 27px;
+    }
+    .mobile-menu {
+        font-size: 32px;
+        line-height: 41px;
+        margin-bottom: 30px;
+    }
+    .mobile-delivery-title {
+        font-size: 28px;
+        line-height: 16px;
+        margin-bottom: 39px;
+    }
+    .mobile-delivery-form {
+        margin-bottom: 68px;
+    }
+}
+
+@media (max-width: 775px) {
+    .footer__wrapper {
+        padding: 40px 0;
+    }
+    .footer__about-personal {
+        display: none;
+        visibility: hidden;
+    }
+    .footer__about-personal-mobile {
+        display: block;
+        visibility: visible;
+    }
+    .footer__logo-block {
+        width: 100%;
+    }
+    .footer__logo-text {
+        margin-bottom: 20px;
+    }
+    .footer__logo-text {
+        width: 100%;
+    }
+    .footer__logo-datas {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 765px) {
+    .footer__about-block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .follow {
+        background-image: url(../images/follow-mobile-bg.png);
+        background-position: calc(50% + 323px) 202px;
+    }
+}
+
+@media (max-width: 704px) {
+    .special__old-price,
+    .bestsellers__old-price,
+    .plarecanta__old-price,
+    .bblaboratories__old-price {
+        font-size: 10px;
+    }
+    .contacts__information {
+        top: calc(50% + 188px);
+    }
+}
+
+@media (max-width: 702px) {
+    .contacts__information {
+        top: calc(50% + 200px);
+    }
+}
+
+@media (max-width: 695px) {
+    .contacts__information {
+        left: calc(50% + -91px);
+        top: calc(50% + 200px);
+    }
+    .contacts__item-inner {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 590px) {
+    .special__item-img,
+    .bestsellers__item-img,
+    .plarecanta__product-img,
+    .bblaboratories__product-img {
+        max-width: 150px;
+        max-height: 150px;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    .special__item-link,
+    .bestsellers__item-link {
+        margin: 5px 5px;
+    }
+    .special__wrapper .slick-slide,
+    .bestsellers__wrapper .slick-slide,
+    .plarecanta__mobile-slider .slick-slide,
+    .bblaboratories__mobile-slider .slick-slide {
+        margin: 0 15px;
+    }
+    .special__product,
+    .bestsellers__product,
+    .plarecanta__product,
+    .bblaboratories__product {
+        padding-top: 15px;
+    }
+    .follow {
+        height: 300px;
+        background-position: calc(50% + 257px) 171px;
+    }
+    .follow__inner {
+        padding-top: 30px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .follow__title {
+        font-size: 30px;
+        line-height: 29px;
+        font-weight: 700;
+        margin-bottom: 23px;
+    }
+    .follow__input {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 610px) {
+    .plarecanta,
+    .bblaboratories {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .plarecanta__content,
+    .bblaboratories__content {
+        display: none;
+    }
+    .plarecanta__inner,
+    .bblaboratories__inner {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .brands__item-img img {
+        max-width: 99px;
+    }
+    .plarecanta-button-mobile,
+    .bblaboratories-button-mobile {
+        display: block;
+        visibility: visible;
+    }
+    .plarecanta__inner,
+    .bblaboratories__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    .special__item-link,
+    .bestsellers__item-link {
+        margin: 10px 10px;
+        width: 50%;
+    }
+    .plarecanta__mobile-slider,
+    .bblaboratories__mobile-slider {
+        display: block;
+        visibility: visible;
+        padding-bottom: 30px;
+    }
+    .plarecanta__inner,
+    .bblaboratories__inner {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 590px) {
+    .header {
+        height: 100%;
+    }
+    .mobile-header {
+        height: 100px;
+    }
+    .logo__img-mobile {
+        max-width: 60px;
+        max-height: 60px;
+        width: 60px;
+        height: 60px;
+    }
+    .header__wrapper {
+        display: none;
+        visibility: hidden;
+    }
+    .mobile-header {
+        visibility: visible;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px;
+        align-items: center;
+    }
+    .header__basket-price {
+        font-size: 8px;
+        top: calc(50% + 5px);
+        left: calc(50% + 5px);
+        width: 17px;
+        height: 17px;
+        padding: 2px;
+    }
+    .banner {
+        height: 470px;
+        background-image: url(../images/mobile-bg.png);
+        background-position: calc(50% + 270px) -71px;
+    }
+    .banner .slick-arrow {
+        top: 55%;
+    }
+    .banner__wrapper {
+        margin: 0 15px 0 15px;
+        width: 375px;
+    }
+    .banner__item-inner {
+        width: 380px;
+        padding-top: 30px;
+    }
+    .banner__title {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 20px;
+    }
+    .banner__text {
+        display: none;
+    }
+    .banner__discount-percent {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .banner__discount-price {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .banner__price-new {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .banner__price {
+        display: block;
+    }
+    .banner__button-about {
+        margin-top: 20px;
+    }
+    .title {
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 20px;
+    }
+    .banner,
+    .special,
+    .bestsellers,
+    .plarecanta,
+    .bblaboratories,
+    .brands,
+    .rewiews,
+    .follow {
+        margin-bottom: 40px;
+    }
+    .special,
+    .bestsellers,
+    .plarecanta,
+    .bblaboratories,
+    .brands,
+    .rewiews,
+    .contacts__container,
+    .footer__wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .special__item-link,
+    .bestsellers__item-link {
+        margin: 15px 15px;
+    }
+    .brands__wrapper {
+        padding: 12px 40px;
+    }
+    .rewiews__wrapper {
+        padding: 0px 15px;
+    }
+    .rewiews-header {
+        margin-bottom: 20px;
+    }
+    .rewiews__stars {
+        margin-bottom: 15px;
+    }
+    .rewiews__item {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .rewiews__text {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .rewiews__sign {
+        font-size: 14px;
+        line-height: 28px;
+        padding-top: 15px;
+    }
+    .contacts {
+        background-position: center calc(50% + 125px);
+    }
+    .contacts__information {
+        left: calc(50% + -85px);
+        top: calc(50% + 151px);
+        width: 290px;
+        padding: 22px;
+    }
+    .contacts__information-name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .contacts__information-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .mobile-menu {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 500;
+        margin-bottom: 67px;
+    }
+    .mobile-contacts {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+    .mobile-delivery-form {
+        margin-bottom: 58px;
+    }
+    .mobile-popup {
+        padding: 20px 30px 30px 30px;
+    }
+    .mobile-popup-header {
+        padding-bottom: 14px;
+    }
+    .mobile-menu {
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+    .mobile-delivery-title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 23px;
+    }
+    .mobile-delivery-form {
+        margin-bottom: 30px;
+    }
+    .mobile-contacts {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 535px) {
+    .special__item-img,
+    .bestsellers__item-img,
+    .plarecanta__product-img,
+    .bblaboratories__product-img {
+        max-width: 130px;
+        max-height: 130px;
+        width: 130px;
+        height: 130px;
+    }
+    .special__item-link,
+    .bestsellers__item-link {
+        position: relative;
+        margin: 7px 7px;
+    }
+    .special__percent,
+    .bestsellers__percent,
+    .plarecanta__percent,
+    .bblaboratories__percent {
+        position: absolute;
+        top: 10px;
+    }
+    .special__wrapper .slick-slide,
+    .bestsellers__wrapper .slick-slide,
+    .plarecanta__mobile-slider .slick-slide,
+    .bblaboratories__mobile-slider .slick-slide {
+        margin: 0 5px;
+    }
+    .special__discount,
+    .bestsellers__discount,
+    .plarecanta__discount,
+    .bblaboratories__discount {
+        display: flex;
+        flex-direction: column;
+    }
+    .special__old-price,
+    .bestsellers__old-price,
+    .plarecanta__old-price,
+    .bblaboratories__old-price {
+        font-size: 10px;
+        line-height: 20px;
+        order: -1;
+    }
+    .special__item-link,
+    .bestsellers__item-link {
+        margin: 5px 5px;
+    }
+    .follow {
+        height: 274px;
+        background-position: calc(50% + 248px) 114px;
+    }
+    .follow__title {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .follow__form {
+        width: 100%;
+    }
+    .follow__input {
+        width: 100%;
+    }
+    .follow__button {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-header {
+        height: 70px;
+    }
+    .logo__img-mobile {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .banner {
+        background-position: calc(50% + 204px) -62px;
+    }
+    .banner__wrapper {
+        margin: 0 15px;
+        width: 380px;
+    }
+    .follow__text {
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 350px;
+        margin-bottom: 37px;
+    }
+    .contacts__description {
+        max-height: 105px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 39px;
+        text-align: left;
+        overflow: hidden;
+    }
+    .contacts__information {
+        top: calc(50% + 141px);
+        left: calc(50% + -39px);
+        width: 200px;
+        padding: 20px;
+    }
+    .contacts__information-text {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .contacts__information-name {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .mobile-popup {
+        padding: 20px 30px 30px 30px;
+    }
+    .mobile-popup-logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .mobile-close-icon {
+        max-width: 35px;
+        max-height: 35px;
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+    }
+    .mobile-popup-header {
+        padding-bottom: 35px;
+    }
+    .mobile-menu {
+        font-size: 25px;
+        line-height: 29px;
+        margin-bottom: 62px;
+    }
+    .mobile-delivery-title {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    .mobile-delivery-form {
+        width: 100%;
+    }
+    .mobile-header__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 421px) {
+    .banner__wrapper {
+        width: 298px;
+    }
+    .banner__item-inner {
+        width: 241px;
+    }
+    .banner__title {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+    .follow {
+        height: 100%;
+        margin-bottom: 40px;
+        background-image: url(../images/follow-mobile-bg.png);
+        background-position: calc(50% + 148px) 86px;
+    }
+    .follow__inner {
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .follow__title {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .follow__text {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 20px;
+    }
+    .follow__input {
+        width: 214px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .follow__form {
+        width: 100%;
+        height: 50px;
+        padding: 13px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .follow__button {
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .follow__button-icon {
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+    }
+    .contacts {
+        height: 599px;
+    }
+    .contacts__map-mobile {
+        background-image: url(../images/contacts-mobile-bg.png);
+        background-position: calc(50% + -59px) -43px;
+        height: 270px;
+    }
+    .contacts__description {
+        max-height: 130px;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 22px;
+    }
+    .contacts__item-inner {
+        display: block;
+    }
+    .contacts__address,
+    .contacts__time,
+    .contacts__phones,
+    .contacts__email,
+    .footer__address,
+    .footer__time,
+    .footer__phones,
+    .footer__email {
+        margin-bottom: 15px;
+    }
+    .contact {
+        padding-left: 24px;
+    }
+    .contacts__information {
+        width: 176px;
+        padding: 19px;
+        top: calc(50% + 138px);
+        left: calc(50% + -114px);
+    }
+    .contacts__information::before {
+        top: -16px;
+        border: 8px solid transparent;
+        border-bottom: 8px solid #fff;
+    }
+    .contacts__information-name {
+        font-size: 10px;
+        line-height: 13px;
+        margin-bottom: 0px;
+    }
+    .contacts__information-text {
+        font-size: 11px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width: 410px) {
+    .footer__wrapper {
+        padding: 40px 0;
+    }
+    .footer__logo-block {
+        font-size: 12px;
+        line-height: 17px;
+        width: 100%;
+    }
+    .footer__logo-text {
+        max-width: 199px;
+        margin-bottom: 30px;
+    }
+    .footer__logo-datas {
+        line-height: 26px;
+        padding-bottom: 40px;
+    }
+    .footer__contacts-block {
+        margin-bottom: 20px;
+    }
+    .footer__about-block {
+        width: 100%;
+    }
+    .footer__about-wrapper {
+        display: block;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .footer__about-title {
+        margin-bottom: 20px;
+    }
+    .footer__about-list-item {
+        padding-bottom: 10px;
+    }
+    .footer__about-personal {
+        display: none;
+    }
+    .footer__about-personal-mobile {
+        display: block;
+        visibility: visible;
+    }
+    .mobile-menu {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 47px;
+    }
+    .mobile-delivery-form {
+        margin-bottom: 45px;
+    }
+    .mobile-contacts {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 78px;
+    }
+    .mobile-footer {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .special__item-img,
+    .bestsellers__item-img,
+    .plarecanta__product-img,
+    .bblaboratories__product-img {
+        max-width: 120px;
+        max-height: 120px;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0;
+    }
+    .special__discount,
+    .bestsellers__discount,
+    .plarecanta__discount,
+    .bblaboratories__discount {
+        display: flex;
+        flex-direction: column;
+    }
+    .special__old-price,
+    .bestsellers__old-price,
+    .plarecanta__old-price,
+    .bblaboratories__old-price {
+        font-size: 10px;
+        line-height: 20px;
+        order: -1;
+    }
+    .special__item-link,
+    .bestsellers__item-link {
+        position: relative;
+        margin: 5px 5px;
+    }
+    .special__percent,
+    .bestsellers__percent,
+    .plarecanta__percent,
+    .bblaboratories__percent {
+        position: absolute;
+        top: 10px;
+    }
+    .special__wrapper .slick-slide,
+    .bestsellers__wrapper .slick-slide,
+    .plarecanta__mobile-slider .slick-slide,
+    .bblaboratories__mobile-slider .slick-slide {
+        margin: 5px 5px;
+    }
+    .special__product,
+    .bestsellers__product,
+    .plarecanta__product,
+    .bblaboratories__product {
+        padding-top: 15px;
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .rewiews__wrapper {
+        padding: 0px 10px;
+    }
+    .rewiews-header {
+        margin-bottom: 20px;
+    }
+    .rewiews__stars {
+        margin-bottom: 15px;
+    }
+    .rewiews__item {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .rewiews__text {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .rewiews__sign {
+        font-size: 14px;
+        line-height: 28px;
+        padding-top: 15px;
+    }
+    .contacts {
+        height: 608px;
+    }
+    .contacts__information {
+        top: calc(50% + 144px);
+    }
+}
+
+@media (max-width: 345px) {
+    .mobile-popup-header {
+        padding-bottom: 10px;
+    }
+    .mobile-menu {
+        margin-bottom: 32px;
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 23px;
+    }
+    .mobile__menu-item {
+        margin-bottom: 12px;
+    }
+    .mobile-delivery-title {
+        font-size: 19px;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+    .mobile-delivery-form {
+        margin-bottom: 25px;
+    }
+    .mobile-contacts {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 21px;
+    }
+    .mobile-contacts-address {
+        margin-top: 15px;
+        margin-bottom: 17px;
+    }
+    .mobile-contacts-time {
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 330px) {
+    .banner__wrapper {
+        width: 260px;
+    }
+}
+
+@media (max-width: 368px) {
+    .contacts {
+        height: 608px;
+    }
+    .contacts__information {
+        top: calc(50% + 144px);
+    }
+}
+
+@media (max-width: 320px) {
+    .banner {
+        background-position: calc(50% + 159px) -73px;
+    }
+    .content-button,
+    .rewiews-button {
+        padding: 15px 25px;
+    }
 }
